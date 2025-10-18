@@ -1,46 +1,40 @@
-from selenium import webdriver
-from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.common.by import By
-import os
+from selenium.common.exceptions import InvalidSessionIdException
+from selenium.common.exceptions import TimeoutException
 import time
-# 浏览器设置
-executable_paths=r".\chromedriver.exe"
-service = webdriver.ChromeService(executable_path=executable_paths)
-option = webdriver.ChromeOptions()
-# 添加保持登录的数据路径：安装目录一般在 %userprofile%\AppData\Local\Google\Chrome\User Data
-option.add_argument(r"user-data-dir=C:\Users\Alison\AppData\Local\Google\Chrome\Selenium Data")
-option.add_argument('--ignore-certificate-errors') 
-option.add_argument('--ignore-ssl-errors')
-# 初始化driver
-driver = webdriver.Chrome(service=service)
-# 最大化窗口（默认不是最大化）
-driver.maximize_window()
+from browser_client import BrowserClient
 
-with open("Ref_Titel.txt", "rt") as files:
-    with open("cite3.txt", "wt", encoding='utf-8') as cite_file:
-        i = 0
-        for line in files:
-            # print(line) line 结尾有\n
-            # 设置浏览器需要打开的url
-            # url = "https://scholar.lanfanshu.cn/scholar?hl=zh-CN&as_sdt=0%2C5&q=" + line + "&btnG="
-            url = "https://scholar.google.com/scholar?oi=gsb95&q=" + line + "&lookup=0&hl=zh-CN"
-            i += 1
-            try:
-                # 发送请求
+def fetch_citation(title: str, browser, index: int):
+    url = f"https://scholar.google.com/scholar?oi=gsb95&q={title}&lookup=0&hl=zh-CN"
+    try:
+        browser.get(url)
+        browser.wait_for_element(By.CLASS_NAME, "gs_or_cit")
+        browser.driver.find_element(By.CLASS_NAME, "gs_or_cit").click()
+        browser.wait_for_element(By.CLASS_NAME, "gs_citr")
+        cite = browser.driver.find_element(By.CLASS_NAME, "gs_citr").text
+        return f'[{index}] ' + cite + '\n'
+    except TimeoutException as timeout_err:
+        print(f'[{index}] 超时错误，检查是否需要人机验证')
+        raise timeout_err # 终止主程序
+    except InvalidSessionIdException as window_err:
+        print(f'[{index}] 找不到会话，检查浏览器是否被关闭')
+        raise window_err # 终止主程序
+    except Exception as err:
+        print(f'[{index}]', err)
+        return f'[{index}] ' + title.strip() + '***ERROR***\n'
+
+def main():
+    browser = BrowserClient('chrome')
+    try:
+        with open("Ref_Titel.txt", "rt") as files, open("saved_cites.txt", "wt", encoding='utf-8') as cite_file:
+            for i, line in enumerate(files, 1):
+                result = fetch_citation(line.strip(), browser, i)
+                cite_file.write(result)
                 time.sleep(3)
-                driver.get(url)
-                # 定位浏览器窗口中元素
-                driver.find_element(By.CLASS_NAME, "gs_or_cit").click()
-                # 因为 gs_citr 在点击 gs_or_cit 后就被创建，但是里面的内容还没有生成
-                # 所以必须添加一个可见的判断 ().is_displayed() 或 ().text != ''
-                # 或其他写法 .until(().text) .until_not(().text != '') .until_not(().not_displayed)
-                # until 返回值是它里面函数的返回值
-                # 等待，直到 until() 内的条件为真才继续执行后面的代码
-                el = WebDriverWait(driver, 20).until(lambda d: d.find_element(By.CLASS_NAME, "gs_citr").is_displayed(), line)
-                cite = driver.find_element(By.CLASS_NAME, "gs_citr").text
-                cite_file.write('[%d] ' % i + cite + '\n')
-                # print(not not cite, el)
-            except Exception as err:
-                print('[{}] '.format(i), err)
-                cite_file.write('[%d] ' % i + line + '***ERROR***' + '\n')
-                continue
+    except Exception as e:
+        print("异常信息:", e)
+    finally:
+        browser.close()
+
+if __name__ == "__main__":
+    main()
