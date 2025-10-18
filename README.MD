@@ -6,7 +6,7 @@ conda-25.5.1
 python-3.14
 
 ## 安装
-爬虫依赖于 Selenium 和 chrome/edge 浏览器，需要安装最新浏览器和对应版本的 Selenium 驱动程序以及 Python 的 Selenium 库
+爬虫依赖于 Selenium 和 chrome 浏览器，需要安装最新浏览器和对应版本的 Selenium 驱动程序以及 Python 的 Selenium 库
 
 1. Selenium 驱动下载
 
@@ -14,10 +14,7 @@ Chrome：
 ```
 https://googlechromelabs.github.io/chrome-for-testing/
 ```
-Edge：
-```
-https://developer.microsoft.com/en-us/microsoft-edge/tools/webdriver/
-````
+
 2. 克隆存储库
 ```
 git clone https://github.com/CaiWenDa/SearchRefOnGoogleScholar.git
