@@ -1,5 +1,5 @@
 # 使用 Selenium 自动从谷歌学术引用文献
-
+如果你写论文需要引用大量文献，并需要使用谷歌学术获取统一的引用格式 (GB/T 7714)，此程序可帮你自动从谷歌学术上获取文献引用
 ## Python 开发环境
 anaconda3  
 conda-25.5.1  
@@ -35,6 +35,9 @@ conda install conda-forge::selenium
 python ./SearchGoogleSchoolar.py
 ```
 运行完毕后引用结果输出到 saved_cites.txt 中
+
+## 扩展
+如果你需要其他引用格式，请手动修改 SearchGoogleSchoolar.py
 
 ## 参阅
 [Selenium 文档](https://www.selenium.dev/documentation/)  
