@@ -14,7 +14,7 @@ def fetch_citation(title: str, browser, index: int):
         cite = browser.driver.find_element(By.CLASS_NAME, "gs_citr").text
         return f'[{index}] ' + cite + '\n'
     except TimeoutException as timeout_err:
-        print(f'[{index}] 超时错误，检查是否需要人机验证')
+        print(f'[{index}] 超时错误，检查网络连接或者是否需要人机验证')
         raise timeout_err # 终止主程序
     except InvalidSessionIdException as window_err:
         print(f'[{index}] 找不到会话，检查浏览器是否被关闭')
@@ -26,7 +26,7 @@ def fetch_citation(title: str, browser, index: int):
 def main():
     browser = BrowserClient('chrome')
     try:
-        with open("Ref_Titel.txt", "rt") as files, open("saved_cites.txt", "wt", encoding='utf-8') as cite_file:
+        with open("ref_titels.txt", "rt") as files, open("saved_cites.txt", "wt", encoding='utf-8') as cite_file:
             for i, line in enumerate(files, 1):
                 result = fetch_citation(line.strip(), browser, i)
                 cite_file.write(result)

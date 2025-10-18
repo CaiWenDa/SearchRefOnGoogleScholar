@@ -1,0 +1,118 @@
+Computational methods for optical mapping
+Reapr: a universal tool for genome assembly evaluation
+Nxrepair: error correction in de novo sequence assembly using nextera mate pairs
+Pecc: correcting contigs based on paired-end read distribution
+Mec: Misassembly error correction in contigs based on distribution of paired-end reads and statistics of gc-contents
+Aligning short sequencing reads with bowtie
+Fast gapped-read alignment with bowtie 2
+Fast and accurate short read alignment with burrows–wheeler transform
+Mapping single molecule sequencing reads using basic local alignment with successive refinement (blasr): application and theory
+Minimap and miniasm: fast mapping and de novo assembly for noisy long sequences
+Minimap2: pairwise alignment for nucleotide sequences
+Pushing the limits of de novo genome assembly for complex prokaryotic genomes harboring very long, near identical repeats
+Assembly of long, error-prone reads using repeat graphs
+Unlocking the secrets of the genome
+Landscape of somatic mutations in 560 breast cancer whole-genome sequences
+An integrated encyclopedia of dna elements in the human genome
+A global reference for human genetic variation
+Resolving the complexity of the human genome using single-molecule sequencing
+Soapdenovo2: an empirically improved memory-efficient short-read de novo assembler
+Scarpa: scaffolding reads with practical algorithms
+Scaffmatch: scaffolding algorithm based on maximum weight matching
+Scaffolding preassembled contigs using sspace
+Fast scaffolding with small independent mixed integer programs
+Opera: reconstructing optimal genomic scaffolds with highthroughput paired-end sequences
+Besst-efficient scaffolding of large fragmented assemblies
+Ilp-based maximum likelihood genome scaffolding
+Swalo: scaffolding with assembly likelihood optimization
+Sopra: Scaffolding algorithm for paired reads via statistical optimization
+Grass: a generic algorithm for scaffolding next-generation sequencing assemblies
+Sliq: Simple linear inequalities for efficient contig scaffolding
+Scaffoldscaffolder: solving contig orientation via bidirected to directed graph reduction
+Hierarchical scaffolding with bambus
+Bambus2: scaffolding metagenomes
+Boss: a novel scaffolding algorithm based on an optimized scaffold graph
+An integer linear programming approach for genome scaffolding
+Scalable genome scaffolding using integer linear programming
+A novel scaffolding algorithm based on contig error correction and path extension
+Wisescaffolder: an algorithm for the semi-automatic scaffolding of next generation sequencing data
+Exact approaches for scaffolding
+Solving scaffolding problem with repeats
+Scop: a novel scaffolding algorithm based on contig classification and optimization
+Improved maize reference genome with single-molecule technologies
+Nanopore sequencing and assembly of a human genome with ultra-long reads
+High contiguity arabidopsis thaliana genome assembly with a single nanopore flow cell
+Sspace-longread: scaffolding bacterial draft genomes using long read sequence information
+Single molecule sequencing-guided scaffolding and correction of draft assemblies
+Links: Scalable, alignment-free scaffolding of draft genomes with long reads
+Z. Ning. 2015. https://www.sanger.ac.uk/tool/smis/
+Rails and cobbler: Scaffolding and automated finishing of draft genomes using long dna sequences
+Dbg2olc: efficient assembly of large genomes using long erroneous reads of the third generation sequencing technologies
+Scaffolding and completing genome assemblies in realtime with nanopore sequencing
+Lrscaf: improving draft genomes using long noisy reads
+Slr: a scaffolding algorithm based on long reads and contig classification
+Arcs: scaffolding genome drafts with linked reads
+Arks: chromosome-scale scaffolding of human genome drafts with linked read kmers
+In vitro, long-range sequence information for de novo genome assembly via transposase contiguity
+Genome assembly from synthetic long read clouds
+AnVIL: An overlap-aware genome assembly scaffolder for linked reads
+Comprehensive mapping of long-range interactions reveals folding principles of the human genome
+High-throughput genome scaffolding from in vivo dna interaction frequency
+High-quality genome (re) assembly using chromosomal contact data
+Mark Cock4, Christophe Zimmer, Susana M
+Scaffolding of long read assemblies using long range contact information
+Integrating hi-c links with assembly graphs for chromosome-scale assembly
+Hi-c guided assemblies reveal conserved regulatory topologies on x and autosomes despite extensive genome shuffling
+Scaffolding and validation of bacterial genome assemblies using optical restriction maps
+Agora: assembly guided by optical restriction alignment
+Sequencing and automated whole-genome optical mapping of the genome of a domestic goat (capra hircus)
+Efficient and scalable scaffolding using optical restriction maps
+Tools and pipelines for BioNano data: molecule assembly pipeline and FASTA super scaffolding tool
+OMGS: optical map-based genome scaffolding
+Chromosome assembly of large and complex genomes using multiple references
+Projector 2: contig mapping for efficient gap-closure of prokaryotic genome sequence assemblies
+OSLay: optimal syntenic layout of unfinished assemblies
+Reordering contigs of draft genomes using the Mauve Aligner
+r2cat: synteny plots and comparative assembly
+MeDuSa: a multi-draft based scaffolder
+Scaffold filling, contig fusion and comparative gene order inference
+SIS: a program to generate draft genome sequence scaffolds for prokaryotes
+CAR: contig assembly of prokaryotic draft genomes using rearrangements
+Multicar: a tool of contig scaffolding using multiple references
+Csar-web: a web server of contig scaffolding using algebraic rearrangements
+CSAR: a contig scaffolding tool using algebraic rearrangements
+Chromosome assembly of large and complex genomes using multiple references
+Cactus: algorithms for genome multiple sequence alignment
+Versatile and open software for comparing large genomes
+Opera-lg: efficient and exact scaffolding of large, repeat-rich eukaryotic genomes with performance guarantees
+SLR-superscaffolder: a de novo scaffolding tool for synthetic long reads using a top-to-bottom scheme
+Scaffolding low quality genomes using orthologous protein sequences
+Composition-based statistics and translated nucleotide searches: improving the tblastn module of blast
+Pep scaffolder: using (homologous) proteins to scaffold genomes
+Blat-the blast-like alignment tool
+Gage: A critical evaluation of genome assemblies and assembly algorithms
+Quast: quality assessment tool for genome assemblies
+A comprehensive evaluation of assembly scaffolding tools
+Repeat-aware evaluation of scaffolding tools
+Modern technologies and algorithms for scaffolding assembled genomes
+Insight into the evolution and functional characteristics of the pan-genome assembly from sesame landraces and modern cultivars
+Accurate, scalable and integrative haplotype estimation
+Haplotype-resolved sweet potato genome traces back its hexaploidization history
+Haplotype-resolved genomes provide insights into structural variation and gene content in Angus and Brahman cattle
+The genome evolution and low-phosphorus adaptation in white lupin
+Improved Brassica oleracea JZS assembly reveals significant changing of LTR-RT dynamics in different morphotypes
+A hybrid de novo genome assembly of the honeybee, Apis mellifera, with chromosome-length scaffolds
+Genome sequence of Malania oleifera, a tree with great value for nervonic acid production
+The genome sequence of the grape phylloxera provides insights into the evolution, adaptation, and invasion routes of an iconic pest
+Chromosome-level genome assembly, annotation and evolutionary analysis of the ornamental plant Asparagus setaceus
+A draft nuclear-genome assembly of the acoel flatworm Praesagittifera naikaiensis
+Improving draft assemblies by iterative mapping and assembly of short reads to eliminate gaps
+SOAPdenovo2: An empirically improved memoryefficient short-read de novo assembler
+Toward almost closed genomes with GapFiller
+Sealer: A scalable gap-closing application for finishing draft genomes
+Gap filling as exact path length problem
+GapReduce: A Gap Filling Algorithm Based on Partitioned Read Sets
+Mind the Gap: Upgrading Genomes with Pacific Biosciences RS Long-Read Sequencing Technology[J] 
+GMcloser: closing gaps in assemblies accurately with a likelihood-based selection of contig or long-read alignments[J] 
+LR_Gapcloser: a tiling path-based gap closer that uses long reads to complete genome assembly[J] 
+TGS-GapCloser: fast and accurately passing through the Bermuda in large genome using error-prone third-generation long reads
