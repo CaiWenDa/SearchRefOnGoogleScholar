@@ -1,3 +1,4 @@
+import random
 from selenium.webdriver.common.by import By
 from selenium.common.exceptions import InvalidSessionIdException
 from selenium.common.exceptions import TimeoutException
@@ -30,7 +31,7 @@ def main():
             for i, line in enumerate(files, 1):
                 result = fetch_citation(line.strip(), browser, i)
                 cite_file.write(result)
-                time.sleep(3)
+                time.sleep(random.randint(5, 10)) # 随机等待，防止被识别为机器人
     except Exception as e:
         print("异常信息:", e)
     finally:
